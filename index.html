@@ -10,7 +10,7 @@
     <body>
         <div class="container">
             <h1 class="name">Luis Fernando Javier Velázquez-Sosa</h1>
-            
+
             <div class="links">
                 <a
                     href="https://github.com/l-velazquez"
@@ -28,10 +28,7 @@
                 </a>
             </div>
             <div class="link">
-                <a
-                    href="404.html"
-                    class="button"
-                    data-preload="500.html"
+                <a href="404.html" class="button" data-preload="404.html"
                     >View Projects</a
                 >
             </div>
@@ -42,13 +39,11 @@
             </div>
         </div>
         <script>
-            // This script preloads the linked page when hovering over the buttons
             document.querySelectorAll(".button").forEach((button) => {
                 let preloaded = false; // Keep track of whether the page has been preloaded
 
                 button.addEventListener("mouseenter", () => {
                     if (!preloaded) {
-                        // Only preload if not already done
                         const preloadUrl = button.getAttribute("data-preload");
                         if (preloadUrl) {
                             const preloadLink = document.createElement("link");
