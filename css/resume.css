@@ -1,122 +1,305 @@
+/* ── Reset & Base ──────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: #1a6b4f;
+  --accent-light: #e8f5ef;
+  --text: #1d1d1f;
+  --text-muted: #6e6e73;
+  --bg: #fafafa;
+  --card: #ffffff;
+  --border: #e5e5e7;
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f5f5f7;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
 }
 
-header {
-    text-align: center;
-    padding: 50px 0;
+a:hover {
+  border-bottom-color: var(--accent);
 }
 
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* ── Page Shell ────────────────────────────────── */
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+/* ── Hero / Header ─────────────────────────────── */
+.hero {
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--border);
 }
 
-header p {
-    font-size: 1.2rem;
-    color: #666;
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
-section {
-    margin-bottom: 50px;
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--border);
+  flex-shrink: 0;
 }
 
-section h2 {
-    font-size: 2rem;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
-.experience,
-.education,
-.skills {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.tagline {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-top: 4px;
 }
 
-.experience h3,
-.education h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.contact-bar {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 12px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
 }
 
-.experience p,
-.education p,
-.skills ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.contact-bar a,
+.contact-bar span {
+  color: var(--text-muted);
 }
 
-.skills ul {
-    display: flex;
-    flex-wrap: wrap;
+.contact-bar a:hover {
+  color: var(--accent);
 }
 
-.skills ul li {
-    background-color: #e0e0e0;
-    margin: 5px;
-    padding: 10px 15px;
-    border-radius: 20px;
+/* ── Two-Column Layout ─────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 48px;
+  padding-top: 48px;
 }
 
+.col-main,
+.col-side {
+  min-width: 0;
+}
+
+/* ── Sections ──────────────────────────────────── */
+.section {
+  margin-bottom: 48px;
+}
+
+.section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* ── Timeline ──────────────────────────────────── */
+.timeline {
+  position: relative;
+  padding-left: 24px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background-color: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -24px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--card);
+  border: 2px solid var(--accent);
+  z-index: 1;
+}
+
+.timeline-item:first-child .timeline-marker {
+  background-color: var(--accent);
+}
+
+.timeline-body .date {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  background-color: var(--accent-light);
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.timeline-body h3 {
+  font-size: 1.125rem;
+  font-weight: 650;
+  margin-bottom: 2px;
+}
+
+.timeline-body .org {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.timeline-body ul {
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.timeline-body ul li {
+  margin-bottom: 6px;
+}
+
+.timeline-body ul li::marker {
+  color: var(--accent);
+}
+
+/* ── Cards (Education) ─────────────────────────── */
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* ── Skill Tags ────────────────────────────────── */
+.skill-group {
+  margin-bottom: 20px;
+}
+
+.skill-group:last-child {
+  margin-bottom: 0;
+}
+
+.skill-group h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background-color: var(--card);
+  color: var(--text);
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.tag:hover {
+  border-color: var(--accent);
+  background-color: var(--accent-light);
+  color: var(--accent);
+}
+
+/* ── Footer ────────────────────────────────────── */
 footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 24px;
 }
 
 footer p {
-    margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
-/* Enhancements */
-header h2 {
-    font-size: 1.5rem;
-    color: #888;
-}
-
-/* Add padding between sections */
-section {
-    margin-bottom: 60px;
-    padding: 20px 0;
-}
-
-/* Categorizing Skills */
-.skills ul {
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-inner {
     flex-direction: column;
-}
+    text-align: center;
+  }
 
-.skills ul li {
-    margin-bottom: 8px;
-    padding: 8px;
-}
+  .contact-bar {
+    justify-content: center;
+  }
 
-.skills h3 {
-    font-size: 1.2rem;
-    color: #555;
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
 }
