@@ -3,44 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 6rem;
-            margin: 0;
-        }
-        p {
-            font-size: 1.5rem;
-            margin: 0;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Projects — Luis Velázquez</title>
+    <meta name="description" content="Selected projects by Luis Fernando Javier Velázquez-Sosa: data science, web development, self-hosted infrastructure, and published research.">
+    <link rel="icon" href="images/ico/LV.ico">
+    <link rel="stylesheet" href="css/projects.css">
 </head>
 <body>
-    <div class="container">
-        <h1>404</h1>
-        <p>Page Not Found</p>
-        <p><a href="/">Go back to Home</a></p>
-    </div>
+
+    <!-- Ambient glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <a href="index.html" class="nav-brand">LV</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-overline">Selected Work</div>
+        <h1>Things I've<br><em>Built</em></h1>
+        <p class="hero-subtitle">From mapping flood risk across Puerto Rico to self-hosting AI search engines on a Raspberry Pi — a collection of projects spanning data science, web development, and infrastructure.</p>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects-section">
+        <div class="section-label">
+            Projects
+            <span>06 Total</span>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- 1. Flood Risk Mapping — Featured Full Width -->
+            <a href="https://l-velazquez.com/inundacionespr/" target="_blank" class="project-card featured">
+                <div class="card-image-wrap">
+                    <img src="images/projects/flood_risk.png" alt="Flood Risk Map of Puerto Rico">
+                    <div class="card-image-overlay"></div>
+                    <span class="card-category">GIS &amp; Data Viz</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Flood Risk Mapping — Puerto Rico</h3>
+                    <p class="card-description">Interactive choropleth visualization mapping flooding risk across municipalities in Puerto Rico. Built to communicate environmental vulnerability through clear, accessible data storytelling.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Geospatial</span>
+                        <span class="card-tag">Data Visualization</span>
+                        <span class="card-tag">Public Health</span>
+                    </div>
+                    <div class="card-cta">View Project <span class="arrow">→</span></div>
+                </div>
+            </a>
+
+            <!-- 2. SDOH Dashboard -->
+            <a href="https://l-velazquez.com/Dashboard-SDOH/" target="_blank" class="project-card">
+                <div class="card-image-wrap">
+                    <img src="images/projects/sdoh_dashboard.png" alt="Social Determinants of Health Dashboard">
+                    <div class="card-image-overlay"></div>
+                    <span class="card-category">Research</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">SDOH &amp; Cardiometabolic Risk Dashboard</h3>
+                    <p class="card-description">Analytics dashboard presenting research findings on social determinants of health and their relationship to cardiometabolic risk factors across populations.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">R / Python</span>
+                        <span class="card-tag">Healthcare</span>
+                        <span class="card-tag">ML</span>
+                    </div>
+                    <div class="card-cta">View Dashboard <span class="arrow">→</span></div>
+                </div>
+            </a>
+
+            <!-- 3. UPR Org Chart -->
+            <a href="https://l-velazquez.com/Organigrama-RCM" target="_blank" class="project-card">
+                <div class="card-image-wrap">
+                    <img src="images/projects/org_chart.png" alt="UPR Medical Sciences Campus Organizational Chart">
+                    <div class="card-image-overlay"></div>
+                    <span class="card-category">Web App</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">UPR Medical Sciences — Org Diagram</h3>
+                    <p class="card-description">Interactive organizational chart for the University of Puerto Rico Medical Sciences Campus. Features collapsible hierarchy, zoom, pan, and infinite canvas navigation.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">JavaScript</span>
+                        <span class="card-tag">Graph Viz</span>
+                        <span class="card-tag">Interactive</span>
+                    </div>
+                    <div class="card-cta">View Chart <span class="arrow">→</span></div>
+                </div>
+            </a>
+
+            <!-- 4. Emily's Portfolio -->
+            <a href="https://emilyboria.com" target="_blank" class="project-card">
+                <div class="card-image-wrap">
+                    <img src="images/projects/emily_portfolio.png" alt="Emily Boria Portfolio Website">
+                    <div class="card-image-overlay"></div>
+                    <span class="card-category">Design</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Emily Boria — Portfolio</h3>
+                    <p class="card-description">Designed and developed a personal portfolio website. Clean, elegant layout with responsive gallery and modern aesthetic tailored to the client's brand.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">HTML / CSS</span>
+                        <span class="card-tag">Design</span>
+                        <span class="card-tag">Freelance</span>
+                    </div>
+                    <div class="card-cta">Visit Site <span class="arrow">→</span></div>
+                </div>
+            </a>
+
+            <!-- 5. Raspberry Pi Self-Hosting -->
+            <a href="#" class="project-card">
+                <div class="card-image-wrap">
+                    <img src="images/projects/raspberry_pi.png" alt="Raspberry Pi Homelab Setup">
+                    <div class="card-image-overlay"></div>
+                    <span class="card-category">Infrastructure</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Raspberry Pi Homelab</h3>
+                    <p class="card-description">Self-hosted infrastructure running on Raspberry Pi — including a Dokploy instance for deploying websites, a SearXNG private search engine integrated with AI for web-augmented search capabilities.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Docker</span>
+                        <span class="card-tag">SearXNG</span>
+                        <span class="card-tag">Dokploy</span>
+                        <span class="card-tag">Self-Hosted</span>
+                    </div>
+                    <div class="card-cta">Homelab <span class="arrow">→</span></div>
+                </div>
+            </a>
+
+            <!-- 6. Published Paper -->
+            <a href="https://doi.org/10.3390/healthcare13192499" target="_blank" class="project-card publication">
+                <div class="card-image-wrap">
+                    <img src="images/projects/research_paper.png" alt="Published Research Paper in MDPI Healthcare">
+                    <div class="card-image-overlay"></div>
+                    <span class="card-category">Publication</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Published Paper — MDPI Healthcare</h3>
+                    <p class="card-description">Peer-reviewed publication in the MDPI Healthcare journal, contributing research findings at the intersection of biomedical informatics and cardiometabolic health outcomes.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Peer-Reviewed</span>
+                        <span class="card-tag">Biomedical</span>
+                        <span class="card-tag">DOI</span>
+                    </div>
+                    <div class="card-cta">Read Paper <span class="arrow">→</span></div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <p>&copy; 2025 Luis Velázquez · <a href="https://github.com/l-velazquez" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/luis-f-velazquez-sosa/" target="_blank">LinkedIn</a></p>
+    </footer>
+
 </body>
 </html>
