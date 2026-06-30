@@ -1,46 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 6rem;
-            margin: 0;
-        }
-        p {
-            font-size: 1.5rem;
-            margin: 0;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>404</h1>
-        <p>Page Not Found</p>
-        <p><a href="/">Go back to Home</a></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Luis Velázquez Sosa</title>
+    <link rel="icon" href="images/ico/LV.ico" />
+    <link rel="stylesheet" href="css/projects.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="page-header">
+        <a href="index.html" class="back-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" />
+          </svg>
+          Home
+        </a>
+        <h1>Projects</h1>
+        <p>A selection of map visualizations and computer networking tools.</p>
+      </header>
+
+      <main>
+        <!-- Map Projects -->
+        <section class="projects-section">
+          <h2 class="section-title">Maps</h2>
+          <div class="projects-grid">
+
+            <div class="project-card">
+              <h3>SDOH Health Risk Dashboard</h3>
+              <p class="description">
+                Interactive map dashboard visualizing cardiometabolic health risk and Social Determinants of Health across Puerto Rico municipalities and ZIP codes. Built with MapLibre GL and Chart.js, using data from Abartys Health Laboratory and the US Census ACS.
+              </p>
+              <div class="tags">
+                <span class="tag">MapLibre GL</span>
+                <span class="tag">Chart.js</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Docker</span>
+              </div>
+              <div class="card-links">
+                <a href="https://sdoh-rcmi.rcm.upr.edu" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd" />
+                  </svg>
+                  Live
+                </a>
+                <a href="https://github.com/l-velazquez/Dashboard-SDOH" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 10 4.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.138 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10Z" clip-rule="evenodd" />
+                  </svg>
+                  Source
+                </a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>Puerto Rico Flood Hazard Map</h3>
+              <p class="description">
+                Interactive map visualizing FEMA flood hazard areas across Puerto Rico. Uses National Flood Hazard Layer data to display risk zones, helping identify vulnerable areas for emergency planning and awareness.
+              </p>
+              <div class="tags">
+                <span class="tag">MapLibre</span>
+                <span class="tag">GeoJSON</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">FEMA Data</span>
+              </div>
+              <div class="card-links">
+                <a href="https://l-velazquez.com/inundacionespr/" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd" />
+                  </svg>
+                  Live
+                </a>
+                <a href="https://github.com/l-velazquez/inundacionespr" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 10 4.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.138 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10Z" clip-rule="evenodd" />
+                  </svg>
+                  Source
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Networking Projects -->
+        <section class="projects-section">
+          <h2 class="section-title">Computer Networking</h2>
+          <div class="projects-grid">
+
+            <div class="project-card">
+              <h3>Packet Sniffer</h3>
+              <p class="description">
+                A raw socket packet capture tool that intercepts network traffic and classifies protocols at multiple layers. Identifies ARP, IP, TCP, UDP packets and application-layer protocols including HTTP, SSH, DNS, and SMTP.
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Raw Sockets</span>
+                <span class="tag">Network Analysis</span>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/l-velazquez/Packet_sniffer" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 10 4.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.138 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10Z" clip-rule="evenodd" />
+                  </svg>
+                  Source
+                </a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>Reliable Transport Layer</h3>
+              <p class="description">
+                Implementation of a reliable data transfer protocol over UDP. Adds custom header records to provide reliable unidirectional transport, simulating how TCP ensures delivery guarantees on top of an unreliable channel.
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">UDP</span>
+                <span class="tag">Transport Protocol</span>
+              </div>
+              <div class="card-links">
+                <a href="https://github.com/l-velazquez/Transport-layer-proyecto" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 10 4.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.138 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10Z" clip-rule="evenodd" />
+                  </svg>
+                  Source
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 Luis Fernando Javier Velázquez Sosa</p>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
