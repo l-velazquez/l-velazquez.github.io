@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Guide — Luis Velázquez Sosa</title>
+    <link rel="icon" href="images/ico/LV.ico" />
+    <link rel="stylesheet" href="css/styleguide.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="page-header">
+        <a href="index.html" class="back-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" />
+          </svg>
+          Home
+        </a>
+        <h1>Style Guide</h1>
+        <p>Design system reference for the portfolio site. Use this page to maintain visual consistency across all pages.</p>
+      </header>
+
+      <main>
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- COLORS -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="sg-section">
+          <h2 class="section-title">Colors</h2>
+          <p class="sg-note">CSS custom properties defined in <code>:root</code>. Used across the resume and projects pages.</p>
+
+          <div class="color-grid">
+            <div class="color-swatch">
+              <div class="swatch" style="background-color: #1a6b4f;"></div>
+              <div class="swatch-info">
+                <span class="swatch-name">Accent</span>
+                <code>#1a6b4f</code>
+                <span class="swatch-var">--accent</span>
+              </div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch" style="background-color: #e8f5ef;"></div>
+              <div class="swatch-info">
+                <span class="swatch-name">Accent Light</span>
+                <code>#e8f5ef</code>
+                <span class="swatch-var">--accent-light</span>
+              </div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch" style="background-color: #1d1d1f;"></div>
+              <div class="swatch-info">
+                <span class="swatch-name">Text</span>
+                <code>#1d1d1f</code>
+                <span class="swatch-var">--text</span>
+              </div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch" style="background-color: #6e6e73;"></div>
+              <div class="swatch-info">
+                <span class="swatch-name">Text Muted</span>
+                <code>#6e6e73</code>
+                <span class="swatch-var">--text-muted</span>
+              </div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch" style="background-color: #fafafa; border: 1px solid #e5e5e7;"></div>
+              <div class="swatch-info">
+                <span class="swatch-name">Background</span>
+                <code>#fafafa</code>
+                <span class="swatch-var">--bg</span>
+              </div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch" style="background-color: #ffffff; border: 1px solid #e5e5e7;"></div>
+              <div class="swatch-info">
+                <span class="swatch-name">Card</span>
+                <code>#ffffff</code>
+                <span class="swatch-var">--card</span>
+              </div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch" style="background-color: #e5e5e7;"></div>
+              <div class="swatch-info">
+                <span class="swatch-name">Border</span>
+                <code>#e5e5e7</code>
+                <span class="swatch-var">--border</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sg-subtitle">Landing Page Colors</h3>
+          <p class="sg-note">Used on the homepage (<code>styles.css</code>) with the dark gradient background.</p>
+          <div class="color-grid">
+            <div class="color-swatch">
+              <div class="swatch" style="background: linear-gradient(135deg, #379dc9, #083a91, #04080f);"></div>
+              <div class="swatch-info">
+                <span class="swatch-name">Gradient BG</span>
+                <code>#379dc9 → #083a91 → #04080f</code>
+                <span class="swatch-var">135deg gradient</span>
+              </div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch" style="background-color: #ff8400;"></div>
+              <div class="swatch-info">
+                <span class="swatch-name">Button Hover</span>
+                <code>#ff8400</code>
+                <span class="swatch-var">button:hover bg</span>
+              </div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch" style="background-color: rgb(255, 128, 0);"></div>
+              <div class="swatch-info">
+                <span class="swatch-name">Link Color</span>
+                <code>rgb(255, 128, 0)</code>
+                <span class="swatch-var">a color</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- TYPOGRAPHY -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="sg-section">
+          <h2 class="section-title">Typography</h2>
+          <p class="sg-note">Font stack: <code>"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif</code></p>
+
+          <div class="type-specimens">
+            <div class="type-row">
+              <span class="type-label">Page Title (h1)</span>
+              <span class="type-sample" style="font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;">Projects</span>
+              <code class="type-spec">2rem / 700 / -0.02em</code>
+            </div>
+            <div class="type-row">
+              <span class="type-label">Section Title (h2)</span>
+              <span class="type-sample section-title-demo">MAPS</span>
+              <code class="type-spec">0.75rem / 700 / uppercase / 0.1em spacing</code>
+            </div>
+            <div class="type-row">
+              <span class="type-label">Card Title (h3)</span>
+              <span class="type-sample" style="font-size: 1.125rem; font-weight: 650;">SDOH Health Risk Dashboard</span>
+              <code class="type-spec">1.125rem / 650</code>
+            </div>
+            <div class="type-row">
+              <span class="type-label">Body Text</span>
+              <span class="type-sample" style="font-size: 0.9rem;">Interactive map dashboard visualizing health data.</span>
+              <code class="type-spec">0.9rem / 1.6 line-height</code>
+            </div>
+            <div class="type-row">
+              <span class="type-label">Small / Meta</span>
+              <span class="type-sample" style="font-size: 0.8rem; color: #6e6e73;">Aug 2024 — Sep 2025</span>
+              <code class="type-spec">0.8rem / text-muted</code>
+            </div>
+            <div class="type-row">
+              <span class="type-label">Tag Text</span>
+              <span class="type-sample" style="font-size: 0.75rem; font-weight: 500;">Python</span>
+              <code class="type-spec">0.75rem / 500</code>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SPACING & LAYOUT -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="sg-section">
+          <h2 class="section-title">Spacing &amp; Layout</h2>
+
+          <table class="sg-table">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Value</th>
+                <th>Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>max-width</code></td>
+                <td>1080px</td>
+                <td>Page container</td>
+              </tr>
+              <tr>
+                <td><code>padding</code></td>
+                <td>0 24px</td>
+                <td>Page horizontal padding</td>
+              </tr>
+              <tr>
+                <td><code>--radius</code></td>
+                <td>10px</td>
+                <td>Card border radius</td>
+              </tr>
+              <tr>
+                <td><code>gap</code></td>
+                <td>24px</td>
+                <td>Grid gap between cards</td>
+              </tr>
+              <tr>
+                <td><code>padding</code></td>
+                <td>28px</td>
+                <td>Card internal padding</td>
+              </tr>
+              <tr>
+                <td><code>margin-bottom</code></td>
+                <td>48px</td>
+                <td>Section spacing</td>
+              </tr>
+              <tr>
+                <td><code>header padding</code></td>
+                <td>64px 0 48px</td>
+                <td>Page header vertical space</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SHADOWS -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="sg-section">
+          <h2 class="section-title">Shadows</h2>
+
+          <div class="shadow-demos">
+            <div class="shadow-box shadow-default">
+              <span class="shadow-label">Default</span>
+              <code>0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)</code>
+            </div>
+            <div class="shadow-box shadow-hover">
+              <span class="shadow-label">Hover</span>
+              <code>0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04)</code>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- COMPONENTS -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="sg-section">
+          <h2 class="section-title">Components</h2>
+
+          <!-- Cards -->
+          <h3 class="sg-subtitle">Card</h3>
+          <p class="sg-note">Used on the projects page. White background, 1px border, 10px radius, subtle shadow. Lifts on hover.</p>
+          <div class="sg-demo">
+            <div class="demo-card">
+              <h3>Project Title</h3>
+              <p class="description">A short description of the project goes here. Keep it to 2-3 sentences for readability.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Django</span>
+                <span class="tag">Docker</span>
+              </div>
+              <div class="card-links">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="13" height="13">
+                    <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd" />
+                  </svg>
+                  Live
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="13" height="13">
+                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 10 4.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.138 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10Z" clip-rule="evenodd" />
+                  </svg>
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <h3 class="sg-subtitle">Tags</h3>
+          <p class="sg-note">Pill-shaped labels for technologies and skills. Hover transitions to accent color.</p>
+          <div class="sg-demo">
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Django</span>
+              <span class="tag">Docker</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MapLibre GL</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <h3 class="sg-subtitle">Timeline</h3>
+          <p class="sg-note">Used on the resume page for experience entries. Vertical line with markers, date badges, and nested content.</p>
+          <div class="sg-demo">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-body">
+                  <span class="date">Sep 2025 — Present</span>
+                  <h3>Job Title</h3>
+                  <p class="org">Organization Name — Department</p>
+                  <ul>
+                    <li>First responsibility or achievement.</li>
+                    <li>Second responsibility or achievement.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-body">
+                  <span class="date">Jan 2024 — Aug 2025</span>
+                  <h3>Previous Role</h3>
+                  <p class="org">Another Organization</p>
+                  <ul>
+                    <li>Description of work performed.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Card -->
+          <h3 class="sg-subtitle">Info Card</h3>
+          <p class="sg-note">Simple card used for education and compact information blocks on the resume.</p>
+          <div class="sg-demo">
+            <div class="info-card">
+              <h3>University of Puerto Rico, Rio Piedras</h3>
+              <p>B.S. Computer Science</p>
+            </div>
+          </div>
+
+          <!-- Back Link -->
+          <h3 class="sg-subtitle">Back Link</h3>
+          <p class="sg-note">Navigation element used at the top of secondary pages to return home.</p>
+          <div class="sg-demo">
+            <a href="#" class="back-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" />
+              </svg>
+              Home
+            </a>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- CSS VARIABLES REFERENCE -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="sg-section">
+          <h2 class="section-title">CSS Variables Reference</h2>
+          <p class="sg-note">Copy this block into any new page's stylesheet to maintain consistency.</p>
+
+          <pre class="sg-code"><code>:root {
+  --accent: #1a6b4f;
+  --accent-light: #e8f5ef;
+  --text: #1d1d1f;
+  --text-muted: #6e6e73;
+  --bg: #fafafa;
+  --card: #ffffff;
+  --border: #e5e5e7;
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06),
+            0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08),
+                  0 2px 4px rgba(0, 0, 0, 0.04);
+}</code></pre>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- FILE STRUCTURE -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="sg-section">
+          <h2 class="section-title">File Structure</h2>
+
+          <table class="sg-table">
+            <thead>
+              <tr>
+                <th>File</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>css/styles.css</code></td>
+                <td>Landing page (dark gradient, centered layout, button hover effects)</td>
+              </tr>
+              <tr>
+                <td><code>css/resume.css</code></td>
+                <td>Resume page (light theme, two-column grid, timeline, skill tags)</td>
+              </tr>
+              <tr>
+                <td><code>css/projects.css</code></td>
+                <td>Projects page (light theme, card grid, project tags, card links)</td>
+              </tr>
+              <tr>
+                <td><code>css/styleguide.css</code></td>
+                <td>This style guide page</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </main>
+
+      <footer>
+        <p>&copy; 2026 Luis Fernando Javier Velázquez Sosa</p>
+      </footer>
+    </div>
+  </body>
+</html>
